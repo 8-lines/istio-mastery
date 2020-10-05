@@ -1,6 +1,9 @@
 .todo
 *.db
 
+Istio files
+istio-resources/
+
 # SA Frontend ignored files
 node_modules/
 **/sa-frontend/build/
