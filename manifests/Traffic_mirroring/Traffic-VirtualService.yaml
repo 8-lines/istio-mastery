@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: encode-mirror
+spec:
+  hosts:
+    - encode
+  http:
+  - route:
+    - destination:
+        host: encode
+        subset: prod
+      weight: 100
+    mirror:
+      host: encode
+      subset: test
